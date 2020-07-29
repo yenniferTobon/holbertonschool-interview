@@ -17,12 +17,9 @@ def canUnlockAll(boxes):
         if box in keys:
             openBox = openBox + 1
             keys = keys + column
-        else: 
+        else:
             closedBox = box
             lockedKeys = column
     if openBox == box:
         return True
     return False
-
-
-
