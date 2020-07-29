@@ -14,7 +14,6 @@
  listint_t *insert_node(listint_t **head, int number){
     listint_t *current;
     listint_t *new;
-    unsigned int n; /* number of nodes */
 
     if (!head)
 		return (NULL);
@@ -42,9 +41,10 @@
             if (current->n <= number ) {
                 current = current->next;
             } else {
-            current->preview = new;
+            *head = new;
             new->next = current;
+            }
         }
     }
     return (new);
- }
+}
