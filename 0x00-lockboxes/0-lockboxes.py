@@ -17,7 +17,6 @@ def canUnlockAll(boxes):
     closedBox = {}
     for column in boxes:
         box = box + 1
-        
         if box in keys:
             openBox = openBox + 1
             keys = keys + column
@@ -32,5 +31,3 @@ def canUnlockAll(boxes):
     if openBox == box:
         return True
     return False
-
-    
